@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+
+</head>
+<body>
+	<table border="1" cellpadding="0" cellspacing="0" width="200" height="100" align="center">
+	<tr>
+		<th align="center">Calculator</th>
+	</tr>
+</table>
+<br>
+<table border="1" cellpadding="0" cellspacing="0" width="700" height="100" align="center">
+	<tr>
+		<th><input type="radio" name="cal" id="b1" value="add">Addition</th>
+		<th><input type="radio" name="cal" id="b2" value="mul">Multiplication</th>
+		<th><input type="radio" name="cal" id="b3" value="div">Divison</th>
+		<!--<th><input type="radio" name="cal" id="b3" value="div">Substraction</th>-->
+	</tr>
+</table>
+<br>
+<table border="1" cellpadding="0" cellspacing="0" width="200" height="100" align="center">
+	<tr>
+		<th>Enter First Number : <input type="text" id="num1" value=""></th>
+	</tr>
+</table>
+<br>
+<table border="1" cellpadding="0" cellspacing="0" width="200" height="100" align="center">
+	<tr>
+		<th>Enter Second Number : <input type="text" id="num2" value=""></th>
+	</tr>
+	</table>
+	<br>
+	<table border="1" cellpadding="0" cellspacing="0" width="200" height="100" align="center">
+		<tr>
+			<th>Result <br><input type="submit" id="ans"></th>
+			<th width="100">
+			<p id='result'></p>
+			</th>
+		</tr>
+	</table>	
+		<script type="text/javascript">
+		$('.ans').click(function()
+		{
+		var num1 = document.getElementById('num1').value;
+		var num2 = document.getElementById('num2').value;
+		num1 = parseInt(num1);
+		num1 = parseInt(num2);
+		var add =num1+num2;
+		var mul = num1*num2;
+		var div =num1/num2;
+		if(document.getElementById("b1").checked)
+		{
+			document.getElementById('result').innerHTML = add;
+			//alert(num1+num2);
+		}
+		else if(document.getElementById("b2").checked)
+		{
+			//document.getElementById('result').innerHTML = num1+num2;
+			alert(num1+num2);
+		}
+		else if(document.getElementById("b3").checked)
+		{
+			//document.getElementById('result').innerHTML = num1+num2;
+			alert(num1+num2);
+		}
+		});
+
+		</script>
+		
+</body>
+</html>
